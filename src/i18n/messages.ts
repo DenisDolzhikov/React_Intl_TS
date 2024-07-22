@@ -16,6 +16,7 @@ export const messages = {
     click_button: "Please click the button below",
     click_here: "click here",
     languages: "languages",
+    login: 'login',
   },
   [LOCALES.RUSSIAN]: {
     learn_to: 'Привет, научимся использовать React-Intl',
@@ -30,6 +31,7 @@ export const messages = {
     click_button: "Пожалуйста, нажмите кнопку ниже",
     click_here: "Нажмите здесь",
     languages: "Языки",
+    login: 'Войти'
   },
   // [LOCALES.FRENCH]: {
   //   learn_to: "Bonjour, apprenons à utiliser React-Intl",

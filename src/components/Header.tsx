@@ -1,29 +1,37 @@
-import { AppBar, Button, IconButton, Toolbar } from '@mui/material';
+import { AppBar, Box, Button, Container, IconButton, Toolbar } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { FC } from 'react';
 import LanguageToggler from './LanguageToggler';
 import Navigation from './Navigation';
+import { FormattedMessage } from 'react-intl';
 
 const Header: FC = () => {
   return (
     <AppBar>
-      <Toolbar
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-        }}
-      >
+      <Container maxWidth='x1'>
+        <Toolbar
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <IconButton size="large" edge="start" color="inherit" sx={{ mr: 5 }}>
+              <MenuIcon />
+            </IconButton>
 
-        <IconButton size="large" edge="start" color="inherit" sx={{ mr: 2 }}>
-          <MenuIcon />
-        </IconButton>
+            <Navigation />
+          </Box>
 
-        <Navigation />
+          <Box>
+            <LanguageToggler />
 
-        <LanguageToggler />
-
-        <Button color="inherit">Login</Button>
-      </Toolbar>
+            <Button color="inherit">
+              <FormattedMessage id='login' />
+            </Button>
+          </Box>
+        </Toolbar>
+      </Container>
     </AppBar>
   );
 };
